@@ -3880,11 +3880,84 @@ input, select, textarea {
 		background-size: 100% 100%;
 	}
 
+		#intro > .inner {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-moz-align-items: center;
+			-webkit-align-items: center;
+			-ms-align-items: center;
+			align-items: center;
+			-moz-justify-content: space-between;
+			-webkit-justify-content: space-between;
+			-ms-justify-content: space-between;
+			justify-content: space-between;
+			gap: 4em;
+		}
+
+		#intro .intro-copy {
+			-moz-flex: 1 1 26em;
+			-webkit-flex: 1 1 26em;
+			-ms-flex: 1 1 26em;
+			flex: 1 1 26em;
+			max-width: 44em;
+		}
+
+		#intro .intro-hero-image {
+			-moz-flex: 0 1 24em;
+			-webkit-flex: 0 1 24em;
+			-ms-flex: 0 1 24em;
+			flex: 0 1 24em;
+			aspect-ratio: 1;
+			border-radius: 0.25em;
+			box-shadow: 0 1.5em 4em rgba(0, 0, 0, 0.25);
+			max-width: 32vw;
+			overflow: hidden;
+			width: 24em;
+		}
+
+			#intro .intro-hero-image img {
+				display: block;
+				height: 100%;
+				object-fit: cover;
+				width: 100%;
+			}
+
 		#intro p {
 			font-size: 1.25em;
 		}
 
 			@media screen and (max-width: 980px) {
+
+				#intro > .inner {
+					-moz-flex-direction: column;
+					-webkit-flex-direction: column;
+					-ms-flex-direction: column;
+					flex-direction: column;
+					-moz-align-items: flex-start;
+					-webkit-align-items: flex-start;
+					-ms-align-items: flex-start;
+					align-items: flex-start;
+					gap: 2em;
+				}
+
+				#intro .intro-copy {
+					-moz-flex: none;
+					-webkit-flex: none;
+					-ms-flex: none;
+					flex: none;
+					max-width: none;
+				}
+
+				#intro .intro-hero-image {
+					-moz-flex: none;
+					-webkit-flex: none;
+					-ms-flex: none;
+					flex: none;
+					max-width: 18em;
+					width: 100%;
+				}
 
 				#intro p br {
 					display: none;
@@ -3893,6 +3966,11 @@ input, select, textarea {
 			}
 
 			@media screen and (max-width: 736px) {
+
+				#intro .intro-hero-image {
+					max-width: 16em;
+					width: 100%;
+				}
 
 				#intro p {
 					font-size: 1em;

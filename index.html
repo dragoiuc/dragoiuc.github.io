@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>CDragoiu Portfolio</title>
+		<title>Dragoiu Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -22,7 +22,7 @@
 							<li><a href="#intro">Home</a></li>
 							<li><a href="#one">Projects</a></li>
 							<li><a href="#two">About Me</a></li>
-							<li><a href="#three">Get in touch</a></li>
+							<li><a href="#three">Contact Me</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -34,12 +34,18 @@
 				<!-- Intro -->
 						<section id="intro" class="wrapper style1 fullscreen fade-up">
 							<div class="inner">
-								<h1>Cristian Dragoiu</h1>
-								<p>Aspiring Software Engineer. <br> Scroll down to check out some of my projects!</p>
-							<!-- <p>Please scroll down to check out some of my projects!</p> -->
-							<ul class="actions">
-								<li><a href="#one" class="button scrolly">Learn more</a></li>
-							</ul>
+								<div class="intro-copy">
+									<h1>Cristian Dragoiu</h1>
+									<p>Aspiring Software Engineer. <br> Scroll down to check out some of my projects!</p>
+								<!-- <p>Please scroll down to check out some of my projects!</p> -->
+								<ul class="actions">
+									<li><a href="#one" class="button scrolly">Learn more</a></li>
+								</ul>
+							</div>
+							<div class="intro-hero-image">
+								<!-- Replace this source with your hero image when ready. -->
+								<img src="images/headshot.png" alt="" />
+							</div>
 						</div>
 					</section>
 
@@ -50,9 +56,9 @@
 							<div class="content">
 								<div class="inner">
 									<h2>DragoEngine</h2>
-									<p>This is my best project currently. <br> It's a 2D game engine written entirely in C++ with integrated Box2D physics, Lua-based gameplay scripting, JSON-driven scenes and actor templates, and a built-in ImGui editor for managing scenes, scripts, and resources. I designed it to support runtime actor instantiation, component lifecycles, event subscriptions, camera controls, audio, text and image rendering, particle systems, and scene transitions, all within a flexible data-driven architecture. This isn't just a renderer or a physics sandbox, but a full workflow for actually building games. </p>
+									<p>My best project currently. <br> It's a 2D game engine written entirely in C++ with integrated Box2D physics, Lua-based gameplay scripting, JSON-driven scenes and actor templates, and a built-in ImGui editor for managing scenes, scripts, and resources. I designed it to support runtime actor instantiation, component lifecycles, event subscriptions, camera controls, audio, text and image rendering, particle systems, and scene transitions, all within a flexible data-driven architecture. This isn't just a renderer or a physics sandbox, but a full workflow for actually building games. </p>
 									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
+										<li><a href="dragoEngine.html" class="button">Learn more</a></li>
 									</ul>
 								</div>
 							</div>
@@ -62,21 +68,21 @@
 							<div class="content">
 								<div class="inner">
 									<h2>MetaPrompt</h2>
-									<p>MetaPrompt is a browser extension I helped build for MHacks 2025 that turns highlighted text from any webpage into a direct query with any LLM of your choice. The goal was to make prompt engineering faster, cleaner, and more accessible by bringing prompt optimization directly into the browser. Users can choose prompt types, add project-specific tags, and generate a refined prompt through a FastAPI backend powered by Gemini. From there, MetaPrompt can copy the result or open it directly in tools like ChatGPT, Gemini, Claude, and Fetch.ai (A competition sponsor). </p>
+									<p>MetaPrompt is a browser extension I helped build for MHacks 2025 that turns highlighted text from any webpage into a direct query with the LLM of your choice. The goal was to make prompt engineering faster, cleaner, and more accessible by bringing prompt optimization directly into the browser. Users can choose prompt types, add project-specific tags, and generate a refined prompt through a FastAPI backend powered by Gemini. From there, MetaPrompt can copy the result or open it directly in tools like ChatGPT, Gemini, Claude, and Fetch.ai (A competition sponsor). </p>
 									<ul class="actions">
-										<li><a href="metaprompt.html" class="button">Learn more</a></li>
+										<li><a href="metaPrompt.html" class="button">Learn more</a></li>
 									</ul>
 								</div>
 							</div>
 						</section>
 						<section>
-							<a href="#" class="image"><img src="images/INSERTIMAGE.png" alt="" data-position="25% 25%" /></a>
+							<a href="#" class="image"><img src="images/New485.png" alt="" data-position="25% 25%" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Ultricies aliquam</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+									<h2>485 Search Engine</h2>
+									<p>A full-stack search engine inspired by Google and Bing, built to search through a large collection of web pages and return ranked results. Users can type a query, tune how much PageRank affects the ranking, and view matching pages with titles, links, and summaries. Behind the scenes, the project processes thousands of HTML documents, builds a searchable index, and runs multiple backend services that work together to deliver fast results. This was a great project for learning how real search engines organize information, rank pages, and scale across separate services.</p>
 									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
+										<li><a href="searchEngine.html" class="button">Learn more</a></li>
 									</ul>
 								</div>
 							</div>
@@ -129,8 +135,8 @@
 				<!-- Three -->
 					<section id="three" class="wrapper style1 fade-up">
 						<div class="inner">
-							<h2>Get in touch</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+							<h2>Contact Me</h2>
+							<p>Have any questions or want to connect? Please reach out!</p>
 							<div class="split style1">
 								<section>
 									<form method="post" action="#">
@@ -156,10 +162,12 @@
 								<section>
 									<ul class="contact">
 										<li>
-											<h3>Address</h3>
-											<span>12345 Somewhere Road #654<br />
+											<h3>Location</h3>
+											<span>Ann Arbor, MI<br />
+											United States</span>
+											<!-- <span>12345 Somewhere Road #654<br />
 											Nashville, TN 00000-0000<br />
-											USA</span>
+											USA</span> -->
 										</li>
 										<li>
 											<h3>Email</h3>
@@ -167,16 +175,16 @@
 										</li>
 										<li>
 											<h3>Phone</h3>
-											<span>(000) 000-0000</span>
+											<span>(248) 981-9619</span>
 										</li>
 										<li>
 											<h3>Social</h3>
 											<ul class="icons">
-												<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-												<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+												<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
+												<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li> -->
+												<li><a href="https://github.com/dragoiuc" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+												<!-- <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
+												<li><a href="https://www.linkedin.com/in/cristian-dragoiu/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 											</ul>
 										</li>
 									</ul>
@@ -191,7 +199,7 @@
 			<footer id="footer" class="wrapper style1-alt">
 				<div class="inner">
 					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Cristian Dragoiu. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</div>
 			</footer>

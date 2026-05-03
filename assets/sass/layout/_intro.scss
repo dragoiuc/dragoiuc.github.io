@@ -13,6 +13,35 @@
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 
+		> .inner {
+			@include vendor('align-items', 'center');
+			@include vendor('display', 'flex');
+			@include vendor('justify-content', 'space-between');
+			gap: 4em;
+		}
+
+		.intro-copy {
+			@include vendor('flex', '1 1 26em');
+			max-width: 44em;
+		}
+
+		.intro-hero-image {
+			@include vendor('flex', '0 1 24em');
+			aspect-ratio: 1;
+			border-radius: _size(border-radius);
+			box-shadow: 0 1.5em 4em rgba(0, 0, 0, 0.25);
+			max-width: 32vw;
+			overflow: hidden;
+			width: 24em;
+
+			img {
+				display: block;
+				height: 100%;
+				object-fit: cover;
+				width: 100%;
+			}
+		}
+
 		p {
 			font-size: 1.25em;
 
@@ -24,6 +53,32 @@
 
 			@include breakpoint('<=small') {
 				font-size: 1em;
+			}
+		}
+
+		@include breakpoint('<=medium') {
+			> .inner {
+				@include vendor('flex-direction', 'column');
+				@include vendor('align-items', 'flex-start');
+				gap: 2em;
+			}
+
+			.intro-copy {
+				@include vendor('flex', 'none');
+				max-width: none;
+			}
+
+			.intro-hero-image {
+				@include vendor('flex', 'none');
+				max-width: 18em;
+				width: 100%;
+			}
+		}
+
+		@include breakpoint('<=small') {
+			.intro-hero-image {
+				max-width: 16em;
+				width: 100%;
 			}
 		}
 
