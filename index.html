@@ -139,23 +139,27 @@
 							<p>Have any questions or want to connect? Please reach out!</p>
 							<div class="split style1">
 								<section>
-									<form method="post" action="#">
+									<form id="contact-form">
 										<div class="fields">
 											<div class="field half">
 												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
+												<input type="text" name="name" id="name" required />
 											</div>
 											<div class="field half">
 												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
+												<input type="email" name="email" id="email" required />
 											</div>
 											<div class="field">
 												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
+												<textarea name="message" id="message" rows="5" required></textarea>
+											</div>
+											<div class="field" style="display: none;">
+												<label for="website">Website</label>
+												<input type="text" name="website" id="website" tabindex="-1" autocomplete="off" />
 											</div>
 										</div>
 										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
+											<li><button type="submit" class="button">Send Message</button></li>
 										</ul>
 									</form>
 								</section>
@@ -171,7 +175,7 @@
 										</li>
 										<li>
 											<h3>Email</h3>
-											<a href="#">user@untitled.tld</a>
+											<a href="mailto:cristiandragoiu78@gmail.com">cristiandragoiu78@gmail.com</a>
 										</li>
 										<li>
 											<h3>Phone</h3>
@@ -213,6 +217,38 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/name-scramble.js"></script>
+			<script>
+				const form = document.querySelector('#contact-form');
+
+				form.addEventListener('submit', async function(event) {
+					event.preventDefault();
+
+					const formData = new FormData(form);
+					const payload = Object.fromEntries(formData.entries());
+
+					try {
+						const response = await fetch('/api/contact', {
+							method: 'POST',
+							headers: {
+								'Content-Type': 'application/json'
+							},
+							body: JSON.stringify(payload)
+						});
+
+						if (response.ok) {
+							form.reset();
+							alert('Message sent!');
+						}
+						else {
+							alert('Something went wrong. Please email me directly.');
+						}
+					}
+					catch (error) {
+						console.error(error);
+						alert('Something went wrong. Please email me directly.');
+					}
+				});
+			</script>
 
 	</body>
 </html>
