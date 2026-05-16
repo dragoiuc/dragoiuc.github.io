@@ -35,15 +35,16 @@
 							<h1 class="major">MetaPrompt</h1>
 							<div class="video-embed">
 								<iframe
-									src="https://youtu.be/skhwH4JcHsk?si=-Ic587JHLyYXjJhd&t=9"
+									src="https://www.youtube.com/embed/skhwH4JcHsk?start=9"
 									title="MetaPrompt video"
 									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 									referrerpolicy="strict-origin-when-cross-origin"
 									allowfullscreen
 								></iframe>
+
 							</div>
-							<p>The above video highlights the final custom features I added to DragoiEngine, with a focus on turning it from a text editor based game engine into a more complete game development workflow. The biggest addition is Shadow Main, a non-destructive editing system that lets me stage changes to scenes, Lua scripts, and resources in a separate shadow workspace before merging them into the main game files. Alongside that, I added a built-in editor and launcher interface for browsing projects, editing content, reviewing staged changes, and managing assets directly inside the engine. These features made the engine feel closer to a real development tool, and closer to the image I have for this software.</p>
-							<p>Built with C++17, Lua 5.4, Box2D, SDL2, Dear ImGui, GLM, RapidJSON, and LuaBridge, with JSON- and Lua-based content pipelines and CMake-based cross-platform builds.</p>
+							<p>MetaPrompt is a browser extension I helped build for MHacks 2025 that turns useful text from any webpage into a stronger prompt for the LLM of your choice. Instead of copying context, switching tabs, and rewriting the same setup instructions over and over, users can highlight text, choose a prompt type, add project-specific tags, and generate a cleaned-up prompt that is ready to copy or send into tools like ChatGPT, Gemini, Claude, and Fetch.ai.</p>
+							<p>The project connects a lightweight extension interface with a FastAPI backend powered by Gemini. The backend takes the selected page context and user options, restructures them into a more specific and useful prompt, and returns a result designed for quick iteration. I focused on making prompt engineering feel less like a separate chore and more like a natural part of reading, researching, and building on the web.</p>
 						</div>
 					</section>
 
